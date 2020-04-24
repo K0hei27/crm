@@ -26,7 +26,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DEBUG = False
 
 try:
-    from .local_settings import *
+    from .local_setting import *
 except ImportError:
     pass
 
@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'crm1'
+    'crm1',
     'accounts'
 ]
 
@@ -141,6 +141,6 @@ STATICFILES_DIRS = [
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 if not DEBUG:
-    SECRET_KEY = os.environ['SECRET_KEY']
+    SECRET_KEY=os.environ['SECRET_KEY']
     import django_heroku #追加
     django_heroku.settings(locals()) #追加
