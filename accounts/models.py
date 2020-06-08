@@ -25,6 +25,7 @@ class Product(models.Model):
     category = models.CharField(max_length=200, null=True, choices=CATEGORY)
     description =models.CharField(max_length=200, null=True, blank=True)
     date_created = models.DateTimeField(auto_now_add=True, null=True)
+    # many to many relationship between tag and product
     tag = models.ManyToManyField(Tag)
 
     def __str__(self):
