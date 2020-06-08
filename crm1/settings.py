@@ -143,3 +143,5 @@ if not DEBUG:
     SECRET_KEY=os.environ['SECRET_KEY']
     import django_heroku #追加
     django_heroku.settings(locals()) #追加
+
+
